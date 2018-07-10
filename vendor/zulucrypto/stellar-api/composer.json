@@ -1,0 +1,27 @@
+{
+    "name": "zulucrypto/stellar-api",
+    "description": "API client for the Stellar network",
+    "autoload": {
+        "psr-4": {
+            "ZuluCrypto\\StellarSdk\\": "src/",
+            "ZuluCrypto\\StellarSdk\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "christian-riesen/base32": "^1.3",
+        "paragonie/sodium_compat": "^1.0",
+        "phpseclib/phpseclib": "^2.0.6",
+        "symfony/filesystem": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zulu Crypto",
+            "email": "zulucrypto@protonmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    }
+}

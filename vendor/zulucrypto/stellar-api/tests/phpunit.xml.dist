@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.phpunit -->
+<phpunit
+    backupGlobals               = "false"
+    backupStaticAttributes      = "false"
+    colors                      = "true"
+    convertErrorsToExceptions   = "true"
+    convertNoticesToExceptions  = "true"
+    convertWarningsToExceptions = "true"
+    processIsolation            = "false"
+    stopOnFailure               = "true"
+    syntaxCheck                 = "false"
+    bootstrap                   = "../vendor/autoload.php"
+>
+
+    <php>
+        <ini name="memory_limit" value="-1" />
+        <ini name="display_errors" value="On" />
+        <ini name="display_startup_errors" value="On" />
+        <ini name="error_reporting" value="E_ALL" />
+    </php>
+
+    <!-- Default excluded groups -->
+    <groups>
+        <exclude>
+            <!-- Requires the integration network: https://github.com/zulucrypto/docker-stellar-integration-test-network -->
+            <group>requires-integrationnet</group>
+            <!-- Requires a hardware wallet. See HardwareWalletIntegrationTest.php -->
+            <group>requires-hardwarewallet</group>
+        </exclude>
+    </groups>
+
+    <testsuites>
+        <testsuite name="All">
+            <directory>.</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
