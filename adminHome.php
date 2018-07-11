@@ -31,51 +31,6 @@
         }
     }
 
-   /* if(isset($_POST['btn-merchants']))
-    {
-        $query = "SELECT Username FROM Users WHERE AccountType = 'Merchant'";
-        $result = mysqli_query($conn,$query);
-        while($row = mysqli_fetch_assoc($result))
-        {
-            foreach($row as $cname => $cvalue)
-            {
-                echo "<br>";
-                print "$cname: $cvalue\t";
-            }
-            print "\r\n";
-        }
-    } */
-
-    /* if(isset($_POST['btn-customers']))
-    {
-        $query = "SELECT Username FROM Users WHERE AccountType = 'Customer'";
-        $result = mysqli_query($conn,$query);
-        while($row = mysqli_fetch_assoc($result))
-        {
-            foreach($row as $cname => $cvalue)
-            {
-                echo "<br>";
-                print "$cname: $cvalue\t";
-            }
-            print "\r\n";
-        }
-    } */
-
-    /*if(isset($_POST['btn-admins']))
-    {
-        $query = "SELECT Username FROM Users WHERE AccountType = 'Admin'";
-        $result = mysqli_query($conn,$query);
-        while($row = mysqli_fetch_assoc($result))
-        {
-            foreach($row as $cname => $cvalue)
-            {
-                echo "<br>";
-                print "$cname: $cvalue\t";
-            }
-            print "\r\n";
-        }
-    } */
-
     if(isset($_POST['btn-transaction']))
     {
         //retrieve source,destination,amount
@@ -137,7 +92,6 @@
         {
             echo "Error : Failed to execute query";
         }
-        //echo("<script type='text/javascript'> alert('Successfull Transaction'); </script>");
     }
 
     if (isset($_POST['btn-logout'])) 
@@ -148,21 +102,7 @@
 		header("Location: index.php");
 		exit;
     }
-    
-   /* if(isset($_POST['btn-viewTransaction']))
-    {
-        $query = "SELECT * FROM Transactions";
-        $result = mysqli_query($conn,$query);
-        while($row = mysqli_fetch_assoc($result))
-        {
-            foreach($row as $cname => $cvalue)
-            {
-                echo "<br>";
-                print "$cname: $cvalue\t";
-            }
-            print "\r\n";
-        }
-    } */
+
 ?>
 
 <!DOCTYPE HTML>

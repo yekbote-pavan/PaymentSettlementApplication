@@ -84,7 +84,6 @@
         {
             echo "Error : Failed to execute query (Insert into Recharges)";
         }
-        //echo("<script type='text/javascript'> alert('Recharge Successful'); </script>");
     }
     
     if(isset($_POST['btn-back']))
